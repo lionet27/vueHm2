@@ -1,0 +1,58 @@
+const app = {
+    data() {
+        return {
+            designs:[
+                {
+                   img:"img/design1.svg",
+                   imgType:'Kitchan Design' ,
+                   artcileContent:'Let’s Get Solution For Building Construction Work',
+                   artcileDate:'26 December,2022',
+                   vector:"img/vectorGrey.svg"
+                },
+                {
+                    img:"img/design2.svg",
+                    imgType:'Living Design' ,
+                    artcileContent:'Low Cost Latest Invented Interior Designing Ideas.',
+                    artcileDate:'22 December,2022',
+                    vector:"img/vectorWhite.svg"
+                 },
+                 {
+                    img:"img/design3.svg",
+                    imgType:'Interior Design' ,
+                    artcileContent:'Best For Any Office & Business Interior Solution',
+                    artcileDate:'25 December,2022',
+                    vector:"img/vectorGrey.svg"
+                 },
+            ],
+            
+
+           
+        }
+    },
+    methods: {
+        addDiscount(){
+            const discount=Math.floor(Math.random()*20+1);
+            this.product.price=this.product.price-(this.product.price*discount/100);
+            isDisabled=true;
+        },
+        addContact(){
+            const contact={
+                id:this.contacts.length+1,
+                firstName:this.firstName,
+                lastName:this.lastName,
+                email:this.email,
+            };
+            this.contacts.push(contact);
+            this.firstName="";
+            this.lastName="";
+            this.email="";
+        },
+        delContact(){
+            this.contacts=this.filter
+        }
+        
+    },
+
+}
+
+Vue.createApp(app).mount("#app");

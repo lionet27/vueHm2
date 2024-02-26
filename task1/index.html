@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+    <div id="app">
+    <nav class="header center">
+        <div class="container header__flex">
+            <div class="header__left">                
+                    <a class="header__left__logo" href="/index.html"><img src="img/Logo.svg" alt="переход на главную старницу"></a>
+                    <p class="header__left__title">Interno</p>
+            </div>
+            <div class="header__right">
+                <a href="">Home</a>
+                <a href="">Project</a>
+                <a href="/blog/blogIndex.html">Blog</a>
+            </div>
+    </nav>
+    <div class="banner center">
+        <div class="container">
+            <div class="banner__wrapper">
+              <img class="banner__img" src="img/banHeader.svg" alt="">
+                <div class="banner__content">
+                    <h1 class="banner__title">Let Your Home Be Unique</h1>
+                    <p class="banner__text">There are many variations of the passages of lorem Ipsum fromavailable, majority.</p>
+                    <button class="banner__button">Get Started <img src="img/Vector.svg" alt="vector"></button>
+                </div>      
+            </div>
+            
+        </div> 
+    </div>
+    <div class="heading center">
+        <h2 class="heading__title">Follow Our Projects</h2 class="">
+            <p class="heading__text">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
+    </div>
+    <div class="project center">
+        <div class="container project__grid">
+            <div class="project__item">
+                <div >
+                    <img class="project__item__img" src="img/kitchan1.svg" alt="">
+                </div>
+                <div class="project__item__content">
+                    <div class="project__item__text">
+                            <p class="project__item__title">Modern Kitchan</p>
+                            <p class="project__item__subtitle">Decor / Artchitecture</p>
+                    </div>
+                    <div class="project__item__vector">
+                        <img  src="img/VectorInEllpse.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="project__item">
+                <div >
+                    <img class="project__item__img23" src="img/kitchan2.svg" alt="">
+                </div>
+                <div class="project__item__content">
+                    <div class="project__item__text">
+                            <p class="project__item__title">Modern Kitchan</p>
+                            <p class="project__item__subtitle">Decor / Artchitecture</p>
+                    </div>
+                    <div class="project__item__vector">
+                        <img src="img/VectorInEllpse.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="project__item">
+                <div class="project__item__img">
+                    <img class="project__item__img23" src="img/kitchan3.svg" alt="">
+                </div>
+                <div class="project__item__content">
+                    <div class="project__item__text">
+                            <p class="project__item__title">Modern Kitchan</p>
+                            <p class="project__item__subtitle">Decor / Artchitecture</p>
+                    </div>
+                    <div class="project__item__vector">
+                        <img src="img/VectorInEllpse.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="project__item">
+                <div >
+                    <img class="project__item__img4" src="img/kitchan4.svg" alt="">
+                </div>
+                <div class="project__item__content">
+                    <div class="project__item__text">
+                            <p class="project__item__title">Modern Kitchan</p>
+                            <p class="project__item__subtitle">Decor / Artchitecture</p>
+                    </div>
+                    <div class="project__item__vector">
+                        <img src="img/VectorInEllpse.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+    <div class="counter center">
+        <div class="counter__item1">
+            <p class="counter__count">12</p>
+            <p class="counter__name">Years Of Experiance</p>
+        </div>
+        <div class="counter__item2">
+            <p class="counter__count">85</p>
+            <p class="counter__name">Success Project</p>
+        </div>
+        <div class="counter__item3">
+            <p class="counter__count">15</p>
+            <p class="counter__name">Active Project</p>
+        </div>
+        <div class="counter__item4">
+            <p class="counter__count">95</p>
+            <p class="counter__name">Happy CUstomers</p>
+        </div>
+    </div>
+    <article class="articles center" >
+        <header class="articles__header">
+            <h2 class="articles__header__title">Articles & News</h2>
+            <p class="articles__header__text">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.</p>
+        </header>
+        <div class="articles__box">
+            <div class="articles__item" v-for="(design,index) in designs" :key="index"  
+            :style="{ background: index === 1 ? '#EAEAEA' : 'none' }">
+                <div  class="articles__item__img">
+                    <img class="articles__item__imgChild" :src="design.img" alt="">
+                    <div class="articles__item__type">
+                        <p>{{design.imgType}}</p>
+                    </div>
+                </div>
+                <h1 class="articles__content">{{design.artcileContent}}</h1>
+                <div class="articles__dateBox">
+                    <p class="articles__date">{{design.artcileDate}}</p>
+                    <img :src="design.vector" alt="">
+                </div>
+                
+            </div>
+           
+        </div>
+    </article>
+    <footer class="footer center">
+        <div class="footer__interno">
+            <a class="footer__interno__logo" href="/index.html"><img src="img/LogoInterno.svg" alt="переход на главную старницу"></a>
+           
+            <p class="footer__interno__text">It is a long established fact that a reader will be distracted lookings.</p>
+           
+            <div class="footer__interno__birdIn">
+                <a href=""><img src="img/bird.svg" alt=""></a>
+                <a href=""><img src="img/in.svg" alt=""></a>
+            </div>
+
+        </div>
+        <div class="footer__pages">
+            <h4 class="footer__pages__title">Pages</h4>
+            <div class="footer__pages__links">
+                <a href="">Home</a>
+                <a href="">Project</a>
+                <a href="/blog/blogIndex.html">Blog</a>
+            </div>
+            
+        </div>
+        <div class="footer__contact">
+            <h4 class="footer__contact__title">Contact</h4>
+            <p class="footer__contact__adress">55 East Birchwood Ave. Brooklyn, New York 11201 <br><br> contact@interno.com <br><br>
+                (123) 456 - 7890</p>
+
+        </div>
+    </footer>
+</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = {
+    data() {
+        return {
+            designs:[
+                {
+                    id:1,
+                   img:"img/design1.svg",
+                   imgType:"Kitchan Design" ,
+                   artcileContent:"Let’s Get Solution For Building Construction \n Work",
+                   artcileDate:"26 December,2022",
+                   vector:"img/vectorGrey.svg",
+                },
+                {
+                    id:2,
+                    img:"img/design2.svg",
+                    imgType:"Living Design" ,
+                    artcileContent:"Low Cost Latest Invented Interior Designing \n Ideas.",
+                    artcileDate:"22 December,2022",
+                    vector:"img/vectorWhite.svg",
+                 },
+                 {
+                    id:3,
+                    img:"img/design3.svg",
+                    imgType:"Interior Design" ,
+                    artcileContent:"Best For Any Office & Business Interior \n Solution",
+                    artcileDate:"25 December,2022",
+                    vector:"img/vectorGrey.svg",
+                 },
+            ],
+          
+        }
+    },
+    methods: {
+                
+    },
+
+}
+
+Vue.createApp(app).mount("#app");
+
+    </script>
+</body>
+
+</html> 

@@ -1,0 +1,435 @@
+$colorCount:#CDA274;
+
+$widthSite:1140px;
+
+@font-face {
+    font-family: DM Serif Display;
+    src:url("fonts/DMSerifDisplay-Regular.ttf");
+   
+    }
+    @font-face {
+        font-family: Jost;
+        src:url("fonts/Jost-VariableFont_wght.ttf");
+       
+        }
+    
+@mixin flexSBcenter($gap) {
+    display: flex;
+    justify-content: space-between;
+    gap: $gap;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    color: inherit;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: $widthSite;
+}
+
+.center {
+    padding-left: calc(50% - $widthSite/2);
+    padding-right: calc(50% - $widthSite/2);
+}
+
+.header{
+    
+    margin-top: 44px;
+    margin-bottom: 57px;
+    &__flex{
+        @include flexSBcenter(none);
+    }
+
+
+    &__left{
+        display: flex;
+        justify-content: flex-start;
+        gap:8px;
+        align-items: center;
+        &__logo{
+
+        }
+        &__title{
+            color: rgb(41, 47, 54);
+            font-family: DM Serif Display;
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+    &__right{
+        display: flex;
+        justify-content: flex-end;
+        gap:40px;
+        align-items: center;
+        
+        color: rgb(41, 47, 54);
+        font-family: Jost;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0em;
+        text-align: center;
+
+    }
+
+}
+
+.banner{
+    
+    margin-bottom: 96px;
+    &__wrapper{
+        position: relative;
+        box-sizing: content-box;
+    }
+    &__img{
+        max-width:100%;
+        border-radius: 70px;
+        background: rgb(244, 240, 236);
+    }
+    &__content{
+        position: absolute;
+        left: 52px;
+        top: 208px;
+        width: 434px;
+        
+    }
+    &__title{
+        color: rgb(41, 47, 54);
+        font-family: DM Serif Display;
+        font-size: 65px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    &__text{
+        color: rgb(77, 80, 83);
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 1%;
+        text-align: left;
+        margin-bottom: 21px;
+    }
+    &__button{
+        padding: 26px 75px 26px 31px;
+        border-radius: 18px;
+        box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+        background: rgb(41, 47, 54);
+        color: rgb(255, 255, 255);
+        font-family: Jost;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 125%;
+        letter-spacing: 2%;
+        text-align: center;
+
+    }
+}
+
+.heading{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 93px;
+    
+    &__title{
+        color: rgb(41, 47, 54);
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 2%;
+
+    }
+    &__text{
+        max-width: 737px;
+        color: rgb(77, 80, 83);
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 1%;
+    }
+
+}
+.project{
+    
+    margin-bottom: 96px;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-column-gap:100px;
+        grid-row-gap:56px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &__img{
+            border-radius:0px 80px 0px 0px;
+            max-width: 520px;
+
+        }
+        &__img4{
+            border-radius:0px 0px 0px 80px;
+            max-width: 520px;
+        }
+        &__img23{
+          
+            max-width: 520px;
+        }
+
+        &__content{
+            display: flex;
+            justify-content: space-between;
+            
+            
+        }
+        &__text{
+
+        }
+        &__title{
+            color:#292F36;
+            font-family: DM Serif Display;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 2%;
+        }
+        &__subtitle{
+            color: rgb(77, 80, 83);
+            font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 1%;
+        }
+        &__vector{
+            
+        }
+
+    }
+}
+.counter{
+   
+    display: flex;
+    justify-content: center;
+    gap: 76px;
+     background-color: #F4F0EC;
+     margin-bottom: 96px;
+     padding: 151px;
+    &__item1{
+        width: 246px;
+        border-right: $colorCount 1px solid;
+    }
+    &__item2{
+        width: 223px;
+        border-right: $colorCount 1px solid;
+    }
+    &__item3{
+        width: 214px;
+        border-right: $colorCount 1px solid;
+    }
+    &__item4{
+        width: 171px;
+    }
+    &__count{
+        color: $colorCount;
+        font-family: DM Serif Display;
+        font-size: 85px;
+        font-weight: 400;
+        line-height: 125%;
+        padding-left: 29px;
+    }
+    &__name{
+        color: rgb(77, 80, 83);
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 1%;
+        text-align: left;
+    }
+
+}
+.articles{
+    margin-bottom: 96px;
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        margin-bottom: 52px;
+        &__title{
+            color: rgb(41, 47, 54);
+            font-family: DM Serif Display;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 2%;
+            text-align: center;
+            
+        
+        }
+        &__text{
+            max-width: 811px;
+            color: rgb(77, 80, 83);
+            font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 1%;
+            text-align: center;        
+        }
+    }
+    &__box{
+        @include flexSBcenter(27px);
+
+    }
+    &__item{
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 62px;
+        box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+        padding: 21px;
+       
+
+        &__img{
+           
+            margin-bottom: 21px;
+           
+        }
+        &__imgChild{
+            max-width: 320px;
+            
+        }
+
+        &__type{
+            position: absolute;
+            top: 249px;
+            left: 41px;
+            padding: 4px 5px 8px 11px;
+            border-radius: 8px 8px 8px 0px;
+            background: rgb(255, 255, 255);
+            box-sizing: content-box;
+
+        }
+        
+    }
+    &__content{
+        color:#292F36;
+        font-family: DM Serif Display;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 2%;
+        text-align: left;
+        margin-bottom: 30px;
+        white-space: pre-line; 
+    }
+    &__dateBox{
+        @include flexSBcenter(none);
+        
+    }
+    
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-bottom: 134px;
+    
+    &__interno{
+        &__logo{
+            margin-bottom: 18px;
+
+        }
+        &__text{
+            color: rgb(77, 80, 83);
+            font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 1%;
+            text-align: left;
+            margin-bottom: 31px;
+        }
+        &__birdIn{
+            display: flex;
+            gap: 54px;
+            justify-content: flex-start;
+            
+        }
+    }
+        
+
+    
+    &__pages{
+        margin-left: 101px;
+        &__title{
+            color: rgb(41, 47, 54);
+            font-family: DM Serif Display;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+    
+        &__links{
+            display: flex;
+            flex-direction: column;
+           
+            color: rgb(77, 80, 83);
+            font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 300%;
+            letter-spacing: 1%;
+            text-align: left;
+        }
+    }
+    &__contact{
+        margin-left: 129px;
+        &__title{
+            color: rgb(41, 47, 54);
+            font-family: DM Serif Display;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-bottom: 26px;
+        }
+        &__adress{
+            color: rgb(77, 80, 83);
+            font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 1%;
+        }
+    }
+}
+
+
